@@ -1,0 +1,54 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+}
+
+.form-select {
+  margin: 1rem;
+}
+
+.form-control {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.BTN {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+}
+
+/* media queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+}
+/* Mobile */
+@media (max-width: 300px) {
+  html {
+    font-size: 45%;
+  }
+  /* .footer {
+    margin-top: 40rem;
+  } */
+}
