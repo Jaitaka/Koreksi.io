@@ -33,20 +33,20 @@ h1 {
 /* Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 75%;
+    font-size: 85%;
   }
 }
 
 /* Tablet */
 @media (max-width: 500px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 /* Mobile */
 @media (max-width: 300px) {
   html {
-    font-size: 45%;
+    font-size: 60%;
   }
   /* .footer {
     margin-top: 40rem;
