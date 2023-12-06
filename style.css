@@ -23,7 +23,7 @@ h1 {
 }
 
 .BTN {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   bottom: 0;
 }
