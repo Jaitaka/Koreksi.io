@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>KOREKSI PG</title>
+    <title>LEMBAR JAWABAN</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,828 +17,92 @@
             rel="stylesheet"
       href="style.css"
     />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <div class="container p-5">
-      <h1>MASUKAN JAWABAN</h1>
-      <form name="submit-to-google-sheet">
-        <div class="row">
-          <div class="col">
-
-              <input type="text" class="form-control" name="NAMA" id="exampleFormControlInput1" placeholder="Nama">
-            </div>
-
-            <select
-              class="form-select"
-              name="1"
-              id="Abdul Mufiz S
-              "
-              required
-              aria-label="Default select example"
-            >
-              <option selected>1</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            <select
-              class="form-select"
-              name="2"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>2</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
+      <h1>LEMBAR JAWABAN</h1>
+      <form name="submit-to-google-sheet" autocomplete="off">
+        <div class="row pb-3">
+          <div class="col-10">
+            <select class="form-select" aria-label="Default select example" x-data="{siswas:[
+              'Aliviyan Dwi Syabani', 
+              'Alzufar Nafiz Azzikri',
+              'Anis Nur Latifah',
+              'Asep Rizki Abdul Qodir',
+              'Asri Maulida',
+              'Ayu Wulandari',
+              'Bisma Pratama',
+              'Cahaya Intan Barokah',
+              'Choerul Akbar Palentino',
+              'Dian Ratna Amalia',
+              'Fairel Atharizz Calief',
+              'Fanny Aprilia Irvansyah',
+              'Fanny Tasya Nirmala',
+              'Fauza Abdurrohman Al Buchori',
+              'Fauzi Abdurrohim Al Buchori',
+              'Fazri Firdaus',
+              'Firman Jati Ibrohim',
+              'Firnasari',
+              'Gema Suherman',
+              'Ghea Febriani Azzahra',
+              'Ifdal Fahlian Oemar Yusuf',
+              'Irsyad Hyuga Arrahsya',
+              'Kartika Dila Septiyani',
+              'Mochamad Alfi Purwanto',
+              'Muhamad Arsakha Virendra Alkhalifi',
+              'Muhamad Badru Salam',
+              'Muhammad Fatih Al Ayyubi',
+              'Muhammad Habibi',
+              'Muhammad Ravael Rizadi',
+              'Muhammad Zulfikar Afandy',
+              'Naufal Afkar Zulfadhli',
+              'Naufal Nawarudin Arfa',
+              'Naurah Hasnah Azzahirah',
+              'Novianti Nurfauziah',
+              'Rafka Alfarizi',
+              'Raissa Hermawati',
+              'Rizky Fahreza',
+              'Sabian Adril Firdaus',
+              'Sakti Adam Malik',
+              'Salma Dila',
+              'Sello Lisyo Septiyano',
+              'Siti Robiah Aladawiatun Nazwa',
+              'Taariq Trisnajati',
+              'Tarsa',
+              'Ubay Wahyu Firmansyah',
+              'Widhiawati',
+              ]}" name="NAMA">
+              <template x-for="siswa in siswas">
+                <option selected x-text="siswa" :value="siswa"></option>
+              </template>
+              </select>
+          </div>
+          <!-- <div class="col">
+            <input type="text" class="form-control" name="NAMA" id="exampleFormControlInput1" placeholder="Nama" autofocus>
+          </div> -->
+        </div>
+      
+        <!-- PG -->
+        <div class="row pb-2" x-data="SoalPG()">
+            <template x-for="nomor in nomors">
+              <div class="col-4 p-2">
+                <input type="text" class="form-control" name="1" id="exampleFormControlInput1" placeholder="1" :name="nomor.NoUrt" :placeholder="nomor.NoUrt">
+              </div>
+            </template>
+        </div>
+        <!-- PG -->
+        <div class="row"> 
+          <div class="col-4 p-1">
+            <label for="Total Skor" class="form-label">Total Skor</label>
+            <input type="tel" name="Total Skor" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="col-4 p-1">
+            <label for="Total Skor" class="form-label">Skor Uraian</label>
+            <input type="tel" name="Skor Uraian" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="BTN col-4">
             
-
-            <select
-              class="form-select"
-              name="3"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>3</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="4"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>4</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="5"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>5</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="6"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>6</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="7"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>7</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="8"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>8</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="9"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>9</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="10"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>10</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="11"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>11</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="12"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>12</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="13"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>13</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="14"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>14</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="15"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>15</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <!-- <select
-              class="form-select"
-              name="16"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>16</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="17"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>17</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="18"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>18</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="19"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>19</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="20"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>20</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="21"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>21</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="22"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>22</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="23"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>23</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="24"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>24</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="25"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>25</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="26"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>26</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="27"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>27</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="28"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>28</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="29"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>29</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="30"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>30</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="31"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>31</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="32"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>32</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="33"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>33</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="34"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>34</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="35"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>35</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="36"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>36</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="37"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>37</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="38"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>38</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="39"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>39</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="40"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>40</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="41"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>41</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="42"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>42</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="43"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>43</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="44"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>44</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="45"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>45</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="46"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>46</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="47"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>47</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="48"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>48</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-             <select
-              class="form-select"
-              name="49"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>49</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select>
-
-            
-
-            <select
-              class="form-select"
-              name="50"
-              
-              required
-              aria-label="Default select example"
-            >
-              <option selected>50</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-            </select> -->
-
-        <div class="row">
-          <div class="BTN col-auto">
-            <div class="m-2">
-              <label for="Total Skor" class="form-label">Total Skor</label>
-              <input type="tel" name="Total Skor" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="m-2">
-              <label for="Skor Uraian" class="form-label">Skor Uraian</label>
-              <input type="tel" name="Skor Uraian" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="m-2">
-              <label for="Skor Essay" class="form-label">Skor Essay</label>
-              <input type="tel" name="Skor Essay" class="form-control" id="exampleInputPassword1">
-            </div>
             <button
               type="submit"
               class="btn btn-primary mt-4"
@@ -856,17 +120,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyvRPqLsUnz_8tiCbuQ7HGmVy5vFXz-stHHIkjKXS3_t22LaZOcV3-la01J09AXMMWKOQ/exec';
-      const form = document.forms['submit-to-google-sheet'];
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => console.log('Success!', response))
-          .catch((error) => console.error('Error!', error.message));
-        form.reset();
-      });
+    <script src="script.js">
     </script>
+
   </body>
 </html>
