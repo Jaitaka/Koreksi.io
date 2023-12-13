@@ -9,6 +9,38 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyvRPqLsUnz_8tiCbuQ7H
         form.reset();
       });
 
+const student = () => {
+return{
+          siswas:[
+            'ABDIL HISAN NURALIM',
+'AZHAR MUSHTHAFA',
+'BUDI SETIAWAN',
+'DELVIA FEBRIYANTI',
+'EKA RAMDANI',
+'ERYSCA ZAHRA S',
+'FARAH PUTRI H',
+'FAZIL EMERALDY',
+'FAZRIL ILHAM',
+'FIRDA HYRA F',
+'JAKA ANGGARA',
+'LUCKY PUTRA P',
+'M IKHLAS ZAELANI',
+'MOCHAMAD RIZKI M',
+'NAFFA ALIFIAH',
+'NESTA NABIL MILANO',
+'NURADHA DIANTI',
+'RADHITIA RAMLI S',
+'RAIHANS K',
+'REVAND NUR ISYAM',
+'SASTIYA JENY RAHAYU',
+'SITI NUR AINI',
+'SYAHRUL RAMADANI',
+'TAUFIK',
+'WINDY GANIA',
+          ]
+        };
+      };
+
 const SoalPG = () => {
 return{
      nomors: [
